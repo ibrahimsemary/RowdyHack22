@@ -1,4 +1,4 @@
-import { request1 } from './loading.js'
+import { request1 } from './main.js'
 //______________________________________________________________
 //get data and store it in result two
 
