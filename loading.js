@@ -30,7 +30,7 @@ let card14 = data[14];
 let card15 = data[15];
 
 location.href = "result1.html"
-}, 20000);
+}, 30000);
 
 
 export function request1() {
