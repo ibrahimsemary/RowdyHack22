@@ -26,8 +26,9 @@ function ebayParse(search){
         myJSON = JSON.parse(request.response);
         values = myJSON["search_results"];
         for(let i = 0; i < myJSON.length; i++){
-            results.push([values[i]["title"],values[i]["prices"],values[i]["condition"],values[i]["image"],values[i]["link"]])
+            results.push([values[i]["title"],values[i]["prices"],"New",values[i]["image"],values[i]["link"]])
         }
         
     }
+    return results;
 }
