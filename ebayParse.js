@@ -2,7 +2,10 @@
 results = [[]];
 let request = new XMLHttpRequest();
 
-request.open("GET", "https://jsonplaceholder.typicode.com/users");
+search = "users";
+
+url = "https://jsonplaceholder.typicode.com/" + search;
+request.open("GET",url);
 request.send();
 request.onload = () => {
     console.log(request);
