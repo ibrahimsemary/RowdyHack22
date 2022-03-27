@@ -1,17 +1,17 @@
 
-function ebayParse(search){
-    results = [[]];
+export function ebayParse(search){
+    let results = [[]];
     let request = new XMLHttpRequest();
-    //let ebayBase = 'https://api.countdownapi.com/request?api_key=C9A8A5376E3647BF9EECCA55D08DA93D&type=search&ebay_domain=ebay.com&search_term='
+    let ebayBase = 'https://api.countdownapi.com/request?api_key=08A63E3595A6443280BC35D620E56EE6&type=search&ebay_domain=ebay.com&search_term='
     // let amazonBase = ''
 
-    url = ebayBase + search;
+    let url = ebayBase + search;
     request.open("GET",url);
     request.send();
     request.onload = () => {
         console.log(request);
-        myJSON = JSON.parse(request.response);
-        values = myJSON["search_results"];
+        let myJSON = JSON.parse(request.response);
+        let values = myJSON["search_results"];
         for(let i = 0; i < values.length && i < 16; i++){
             // if(values[i].includes("condition")){
             //     results.push([values[i]["title"],values[i]["prices"],values[i]["condition"],values[i]["image"],values[i]["link"]]);
@@ -22,10 +22,9 @@ function ebayParse(search){
             //results.push(values[i]['title']);
         }
         console.log(results);
-        
+        return results;    
     }
     
-    return results;
     // url = amazonBase + search;
     // request.open("GET",url);
     // request.send();
@@ -39,5 +38,3 @@ function ebayParse(search){
         
     // }
 }
-
-console.log(ebayParse('shoes'));

@@ -1,19 +1,14 @@
 let searched = "";
-
-//get data from api by calling function
-//not doing it now because api limited stuff
-/*
-document.getElementById("dark_field").oninput = function () {
-    searched = document.getElementById("dark_field").value;
+if(location.href.includes("main.html")){
+    document.getElementById("searchButton").onclick = function(){
+        searched = document.getElementById("dark_field").value;
+        location.href = "loading.html?searched=" + searched;
+    }
 }
 
-document.getElementById("searchButton").onclick = function () {
-    console.log("clicked");
-}
-*/
 //______________________________________________________
 //stuff for second page (result 2)
-
+/*
 let data = [
     [],
     [
@@ -129,47 +124,7 @@ let data = [
         "https://www.ebay.com/itm/284523926701"
     ]
 ]
-
-let card1 = data[1];
-let card2 = data[2];
-let card3 = data[3];
-
-let card4 = data[4];
-let card5 = data[5];
-let card6 = data[6];
-
-let card7 = data[7];
-let card8 = data[8];
-let card9 = data[9];
-
-let card10 = data[10];
-let card11 = data[11];
-let card12 = data[12];
-
-let card13 = data[13];
-let card14 = data[14];
-let card15 = data[15];
-
-
-export function request1() {
-    return [card1, card2, card3];
-}
-
-export function request2(){
-    return [card4,card5,card6];
-}
-
-export function request3() {
-    return [card7, card8, card9];
-}
-
-export function request4() {
-    return [card10, card11, card12];
-}
-
-export function request5() {
-    return [card13, card14, card15];
-}
+*/
 
 
 
